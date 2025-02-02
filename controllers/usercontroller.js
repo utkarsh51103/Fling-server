@@ -25,7 +25,8 @@ const signup = async (req, res, next) => {
     res.cookie("jwt", createToken(email, user.id), {
       maxage,
       secure: true,
-      samSite: "None",
+      sameSite: "None",
+      httpOnly:true,
     });
     return res.status(201).json({
       user: {
@@ -61,7 +62,8 @@ const login = async (req, res, next) => {
     res.cookie("jwt", createToken(email, user.id), {
       maxage,
       secure: true,
-      samSite: "None",
+      sameSite: "None",
+      httpOnly:true,
     });
     return res.status(200).json({
       user: {
