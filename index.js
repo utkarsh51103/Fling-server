@@ -4,7 +4,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import mongoose from 'mongoose';
 import authroute from './routes/AuthRoute.js';
-import contactRoutes from './routes/contactroutes.js';
+import contactRoutes from './routes/contactRoutes.js';
 import messagesRoutes from './routes/MessagesRoutes.js';
 import setupsocket from './socket.js';
 import channelRoutes from './routes/ChannelRoutes.js';
