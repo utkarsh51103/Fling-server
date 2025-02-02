@@ -187,7 +187,7 @@ const deleteprofileimage = async (req, res, next) => {
 };
 const handleLogout = async (req, res, next) => {
   try {
-   res.cookie("jwt","",{maxage:1,secure:true,samSite:"None"})
+   res.cookie("jwt","",{maxage:1,secure:true,sameSite:"None"})
    res.status(200).json({message:"Logout Success"})
   } catch (error) {
     console.log(error);
